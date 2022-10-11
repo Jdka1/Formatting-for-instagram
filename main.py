@@ -1,13 +1,20 @@
 from PIL import Image
 import os, sys
-
+import shutil
+import time
 
 def convert_to_jpg(infile):
-    os.mkdir('/Users/arymehr/Documents/CS Projects/Image Resizing/')
-    removed_filetype = ''.join(infile.split('.')[:-1])
-    outfile = f"{removed_filetype}.jpg"
-    
+    try:
+        shutil.rmtree('Converted IMGs')
+    except Exception as e:
+        print(e)
 
+
+    os.mkdir('/Users/arymehr/Documents/CS Projects/Image Resizing/Converted IMGs')
+
+    removed_filetype = ''.join(infile.split('.')[:-1])
+    outfile = f"Converted IMGs/{removed_filetype}.jpg"
+    
     if infile != outfile:
         try:
             with Image.open(infile) as to_jpg:
