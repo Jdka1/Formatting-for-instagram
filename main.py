@@ -3,7 +3,7 @@ import os, sys
 import shutil
 import time
 
-def convert_to_jpg(infile):
+def convert_to_jpg(infile, portrait):
     try:
         shutil.rmtree('Converted IMGs')
     except Exception as e:
@@ -19,6 +19,11 @@ def convert_to_jpg(infile):
         try:
             with Image.open(infile) as to_jpg:
                 rgb_im = to_jpg.convert('RGB')
+                print(rgb_im.size)
+                resized_im = rgb_im.thumbnail((1080, 1350)) #if portrait == True else rgb_im.thumbnail((1080, 566))
+                print(resized_im)
+                # rgb_im.save(outfile.resize())
+                
 
                 for i in range(1, 100, 5):
                     rgb_im.save(outfile, quality=i)
@@ -30,4 +35,4 @@ def convert_to_jpg(infile):
 
 
 
-convert_to_jpg('testim.png')
+convert_to_jpg('testim.png', portrait=True)
