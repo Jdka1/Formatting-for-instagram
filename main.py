@@ -19,7 +19,9 @@ def convert_to_jpg(infile):
         try:
             with Image.open(infile) as to_jpg:
                 rgb_im = to_jpg.convert('RGB')
-                rgb_im.save(outfile)
+                for i in range(1, 100, 5):
+                    x = rgb_im
+                    x.save(outfile, quality=i)
         except Exception as e:
             print(e)
 
