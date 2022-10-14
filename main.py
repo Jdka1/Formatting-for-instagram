@@ -5,6 +5,3 @@ create_post(
     numtags=10,
     imgpath='testim.png'
 )
-
-# https://deepai.org/machine-learning-model/text2img
-# generate images and captions
