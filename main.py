@@ -1,9 +1,10 @@
-from scripts.gethashtags import get_hashtags
-from scripts.tojpg import convert_to_jpg
+from scripts.createpost import create_post
 
+create_post(
+    topic='photography',
+    numtags=10,
+    imgpath='testim.png'
+)
 
-[print('\n') for i in range(10)]
-
-
-print(get_hashtags('landscapephotography', 10))
-convert_to_jpg('testim.png', portrait=False)
+# https://deepai.org/machine-learning-model/text2img
+# generate images and captions
