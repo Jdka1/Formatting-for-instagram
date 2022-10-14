@@ -20,8 +20,8 @@ def convert_to_jpg(infile, portrait):
             with Image.open(infile) as to_jpg:
                 rgb_im = to_jpg.convert('RGB')
                 print(rgb_im.size)
-                resized_im = rgb_im.thumbnail((1080, 1350)) #if portrait == True else rgb_im.thumbnail((1080, 566))
-                print(resized_im)
+                rgb_im.thumbnail((1080, 1350)) #if portrait == True else rgb_im.thumbnail((1080, 566))
+                rgb_im.show()
                 # rgb_im.save(outfile.resize())
                 
 
