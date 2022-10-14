@@ -25,8 +25,3 @@ def convert_to_jpg(infile, portrait):
         except Exception as e:
             print(e)
 
-
-
-
-
-convert_to_jpg('testim.png', portrait=False)

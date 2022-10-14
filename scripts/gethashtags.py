@@ -2,9 +2,7 @@ import requests
 from bs4 import BeautifulSoup
 import random
 
-[print('\n') for i in range(10)]
-
-def get_hashtags(topic, num):
+def get_hashtags(topic, num=20):
     url = f'http://best-hashtags.com/hashtag/{topic}/'
     html = requests.get(url=url).text
     soup = BeautifulSoup(html, 'html.parser')
