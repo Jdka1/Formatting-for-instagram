@@ -15,4 +15,3 @@ def get_hashtags(topic, num=20):
     hashtags = [hashtag for hashtag in hashtags if hashtag]
     
     return [random.choice(hashtags) for i in range(min(num,len(hashtags)))]
-

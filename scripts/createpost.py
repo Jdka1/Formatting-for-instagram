@@ -1,5 +1,5 @@
-from scripts.gethashtags import get_hashtags
-from scripts.tojpg import convert_to_jpg
+from gethashtags import get_hashtags
+from tojpg import convert_to_jpg
 import os
 import shutil
 
@@ -22,3 +22,4 @@ def create_post(topic, numtags, imgpath):
     # format image
     convert_to_jpg(imgpath)
     shutil.move("Converted IMGs/tojpg.jpg", "Post Info")
+
