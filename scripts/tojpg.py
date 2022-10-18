@@ -2,8 +2,7 @@ from PIL import Image
 import os, sys
 import shutil
 import time
-for i in range(10):
-    print('\n')
+
 
 def convert_to_jpg(infile):
     try:

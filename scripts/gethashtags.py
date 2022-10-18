@@ -16,5 +16,3 @@ def get_hashtags(topic, num=20):
     
     return [random.choice(hashtags) for i in range(min(num,len(hashtags)))]
 
-
-print(get_hashtags('landscapephotography', 20))
