@@ -1,7 +1,9 @@
-from gethashtags import get_hashtags
-from tojpg import convert_to_jpg
+from scripts.gethashtags import get_hashtags
+from scripts.tojpg import convert_to_jpg
 import os
 import shutil
+from PIL import Image
+
 
 
 def create_post(topic, numtags, imgpath):
@@ -23,3 +25,17 @@ def create_post(topic, numtags, imgpath):
     convert_to_jpg(imgpath)
     shutil.move("Converted IMGs/tojpg.jpg", "Post Info")
 
+
+
+
+imgpath = str(input('Enter Filepath: '))
+topic = str(input('Enter hashtag topic: '))
+numtags = int(input('Enter number of hashtags: '))
+
+
+with Image.open(imgpath) as f:
+    create_post(
+        topic=str(topic),
+        numtags=numtags,
+        imgpath=imgpath
+    )
