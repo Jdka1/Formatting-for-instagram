@@ -9,7 +9,7 @@ from PIL import Image
 
 
 
-def create_post(topic, numtags, imgpath):
+def create_post(topics, numtags, imgpath):
     try:
         shutil.rmtree('post info')
     except Exception:
@@ -20,7 +20,7 @@ def create_post(topic, numtags, imgpath):
 
     # create caption
     with open('Post Info/caption.txt', 'w') as f:
-        hashtags = get_hashtags(topic, numtags)
+        hashtags = get_hashtags(topics, numtags)
         formatted_hashtags = ''.join([f'{hashtag} ' for hashtag in hashtags])
         f.write(''.join(formatted_hashtags))
 
