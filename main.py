@@ -38,3 +38,5 @@ with Image.open(imgpath) as f:
 # ----------------------------------------------------------
 
 post_to_insta()
+
+# add post to story as well
