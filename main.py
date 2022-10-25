@@ -45,25 +45,16 @@ def post_to_insta():
 
 
 
-# topics = ["sanfranciscophotography"]
-# numtags = 30
-# imgpath = "/Users/aryanmehra/Downloads/IMG_0545 (1).jpg"
+topics = ["sanfranciscophotography"]
+numtags = 30
+imgpath = "/Users/aryanmehra/Downloads/IMG_0545 (1).jpg"
 
-# with Image.open(imgpath) as f:
-#     create_post(
-#         topics=topics,
-#         numtags=numtags,
-#         imgpath=imgpath
-#     )
+with Image.open(imgpath) as f:
+    create_post(
+        topics=topics,
+        numtags=numtags,
+        imgpath=imgpath
+    )
 
-# post_to_insta()
-
-bot = Bot()
-bot.login(username=creds['user'],
-        password=creds['pass'])
-
-latest_post_id = bot.get_your_medias()[0]
-print(latest_post_id)
-
-bot.comment(latest_post_id, "🌉🌉")
+post_to_insta()
 
