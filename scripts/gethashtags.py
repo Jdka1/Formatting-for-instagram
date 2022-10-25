@@ -17,5 +17,5 @@ def get_hashtags(topics, num=20):
             hashtags += ptag_list
         
         
-    hashtags = [hashtag for hashtag in hashtags if hashtag]
+    hashtags = [*set([hashtag for hashtag in hashtags if hashtag])]
     return [random.choice(hashtags) for i in range(min(num,len(hashtags)))]
