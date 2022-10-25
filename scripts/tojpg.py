@@ -20,7 +20,7 @@ def convert_to_jpg(infile):
         try:
             with Image.open(infile) as to_jpg:
                 rgb_im = to_jpg.convert('RGB')
-                rgb_im.thumbnail((1080, 1080)) # limiting width and height to 1080p
+                rgb_im.thumbnail((1280, 1080)) # limiting width and height to 1080p
                 rgb_im.save(outfile)
 
         except Exception as e:
