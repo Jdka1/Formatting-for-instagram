@@ -10,8 +10,8 @@ def convert_to_jpg(infile):
     except Exception:
         pass
 
-
-    os.mkdir('/Users/arymehr/Documents/CS Projects/Formatting-for-instagram/Converted IMGs')
+    sys.path.insert(0, "/Users/aryanmehra/Documents/CS Projects/Formatting-for-instagram/")
+    os.mkdir('Converted IMGs/')
 
     removed_filetype = ''.join(infile.split('.')[:-1])
     outfile = f"Converted IMGs/tojpg.jpg"

@@ -1,5 +1,8 @@
-from scripts.gethashtags import get_hashtags
-from scripts.tojpg import convert_to_jpg
+import sys
+sys.path.insert(0, "/Users/aryanmehra/Documents/CS Projects/Formatting-for-instagram/scripts")
+
+from gethashtags import get_hashtags
+from tojpg import convert_to_jpg
 import os
 import shutil
 from PIL import Image
@@ -11,8 +14,9 @@ def create_post(topic, numtags, imgpath):
         shutil.rmtree('post info')
     except Exception:
         pass
-
-    os.mkdir('/Users/arymehr/Documents/CS Projects/Formatting-for-instagram/Post Info')
+    
+    sys.path.insert(0, "/Users/aryanmehra/Documents/CS Projects/Formatting-for-instagram/")
+    os.mkdir('Post Info/')
 
     # create caption
     with open('Post Info/caption.txt', 'w') as f:
@@ -24,18 +28,3 @@ def create_post(topic, numtags, imgpath):
     # format image
     convert_to_jpg(imgpath)
     shutil.move("Converted IMGs/tojpg.jpg", "Post Info")
-
-
-
-
-imgpath = str(input('Enter Filepath: '))
-topic = str(input('Enter hashtag topic: '))
-numtags = int(input('Enter number of hashtags: '))
-
-
-with Image.open(imgpath) as f:
-    create_post(
-        topic=str(topic),
-        numtags=numtags,
-        imgpath=imgpath
-    )
