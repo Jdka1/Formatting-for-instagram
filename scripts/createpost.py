@@ -26,5 +26,5 @@ def create_post(topics, numtags, imgpath):
 
 
     # format image
-    convert_to_jpg(imgpath)
+    convert_to_jpg(imgpath, outfile="Converted IMGs/tojpg.jpg")
     shutil.move("Converted IMGs/tojpg.jpg", "Post Info")

@@ -4,7 +4,7 @@ import shutil
 import time
 
 
-def convert_to_jpg(infile):
+def convert_to_jpg(infile, outfile):
     try:
         shutil.rmtree('Converted IMGs')
     except Exception:
@@ -14,14 +14,12 @@ def convert_to_jpg(infile):
     os.mkdir('Converted IMGs/')
 
     removed_filetype = ''.join(infile.split('.')[:-1])
-    outfile = f"Converted IMGs/tojpg.jpg"
     
-    if infile != outfile:
-        try:
-            with Image.open(infile) as to_jpg:
-                rgb_im = to_jpg.convert('RGB')
-                rgb_im.thumbnail((1280, 1080)) # limiting width and height to 1080p
-                rgb_im.save(outfile)
+    try:
+        with Image.open(infile) as to_jpg:
+            rgb_im = to_jpg.convert('RGB')
+            rgb_im.thumbnail((1280, 1080)) # limiting width and height to 1080p
+            rgb_im.save(outfile)
 
-        except Exception as e:
-            print(e)
+    except Exception as e:
+        print(e)
