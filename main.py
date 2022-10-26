@@ -44,10 +44,10 @@ def post_to_insta():
 
 
 
-
-topics = ["sanfranciscophotography"]
+# travelphotography
+topics = ["travelphotography"]
 numtags = 30
-imgpath = "/Users/aryanmehra/Downloads/IMG_0545 (1).jpg"
+imgpath = "/Users/aryanmehra/Desktop/IMG_1292-2-Edit copy (2).jpg"
 
 with Image.open(imgpath) as f:
     create_post(
