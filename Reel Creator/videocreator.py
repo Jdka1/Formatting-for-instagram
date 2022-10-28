@@ -1,10 +1,11 @@
 from moviepy.editor import *
 import os
 import shutil
-import sys
 
-sys.path.insert(0, "/Users/aryanmehra/Documents/CS Projects/Formatting-for-instagram/")
-from scripts.tojpg import convert_to_jpg
+import sys
+sys.path.append("/Users/aryanmehra/Documents/CS Projects/Instagram-bot/scripts/")
+from tojpg import convert_to_jpg
+sys.path.append("/Users/aryanmehra/Documents/CS Projects/Instagram-bot/")
 
 
 
