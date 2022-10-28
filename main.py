@@ -1,11 +1,12 @@
 from scripts.createpost import create_post
 from PIL import Image
-from credentials import creds
 from instabot import Bot
 import time
 import random
 import shutil
 
+from dotenv import load_dotenv
+import os
 
 def delete_config():
     try:
@@ -26,11 +27,13 @@ def post_to_insta():
     
     print("Posting...")
     
+    load_dotenv()
+    
     delete_config()
  
     bot = Bot()
-    bot.login(username=creds['user'],
-            password=creds['pass'])
+    bot.login(username=os.getenv("USERNAME"),
+            password=os.getenv("PASSWORD"))
     
     pause_random()
     with open("Post Info/caption.txt", "r") as f:
@@ -47,7 +50,7 @@ def post_to_insta():
 # travelphotography
 topics = ["travelphotography"]
 numtags = 30
-imgpath = "/Users/aryanmehra/Desktop/IMG_1292-2-Edit copy (2).jpg"
+imgpath = "/Users/aryanmehra/Downloads/IMG_1679 (2).jpg"
 
 with Image.open(imgpath) as f:
     create_post(
@@ -57,4 +60,3 @@ with Image.open(imgpath) as f:
     )
 
 post_to_insta()
-

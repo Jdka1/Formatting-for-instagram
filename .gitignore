@@ -2,3 +2,4 @@ credentials.py
 config
 __pycache__/
 Reel Creator/Reel/
+.env

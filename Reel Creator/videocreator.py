@@ -73,8 +73,8 @@ def create_reel():
 
 
 create_clips(
-    "/Users/aryanmehra/Documents/beforeafter/4V7A0386-2.jpg",
-    "/Users/aryanmehra/Documents/beforeafter/4V7A0386.jpg"
+    "/Users/aryanmehra/Documents/beforeafter/4V7A0377.jpg",
+    "/Users/aryanmehra/Documents/beforeafter/4V7A0377-2.jpg"
 )
 create_reel()
 

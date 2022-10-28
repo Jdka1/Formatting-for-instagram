@@ -1,8 +1,5 @@
-import sys
-sys.path.insert(0, "/Users/aryanmehra/Documents/CS Projects/Formatting-for-instagram/scripts")
-
-from gethashtags import get_hashtags
-from tojpg import convert_to_jpg
+from scripts.gethashtags import get_hashtags
+from scripts.tojpg import convert_to_jpg
 import os
 import shutil
 from PIL import Image
@@ -15,7 +12,6 @@ def create_post(topics, numtags, imgpath):
     except Exception:
         pass
     
-    sys.path.insert(0, "/Users/aryanmehra/Documents/CS Projects/Formatting-for-instagram/")
     os.mkdir('Post Info/')
 
     # create caption
