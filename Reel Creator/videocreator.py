@@ -66,16 +66,25 @@ def create_reel():
     # add audio
     audioclip = AudioFileClip("Reel Creator/assets/soundeffect.mp3")
     reel = reel.set_audio(audioclip)
+    reel.fps = 24
     
     # export video 
-    reel.write_videofile("Reel Creator/Reel/reel.mp4", fps=24)
+    # reel.write_videofile("Reel Creator/Reel/reel.mp4")
+    reel.write_videofile("Reel Creator/Reel/reel.mp4", 
+                     codec='libx264', 
+                     audio_codec='aac', 
+                     temp_audiofile='temp-audio.m4a', 
+                     remove_temp=True
+                     )
+
+
 
 
 
 
 create_clips(
-    "/Users/aryanmehra/Documents/beforeafter/4V7A0377.jpg",
-    "/Users/aryanmehra/Documents/beforeafter/4V7A0377-2.jpg"
+    "/Users/aryanmehra/Downloads/4V7A0377 6.21.36 PM.jpg",
+    "/Users/aryanmehra/Downloads/4V7A0377-2.jpg"
 )
 create_reel()
 
