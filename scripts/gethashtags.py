@@ -18,4 +18,5 @@ def get_hashtags(topics, num=20):
         
         
     hashtags = [*set([hashtag for hashtag in hashtags if hashtag])]
+    hashtags += ["#yourshotphotographer", "@natgeo", "@natgeoyourshot"]
     return [random.choice(hashtags) for i in range(min(num,len(hashtags)))]
