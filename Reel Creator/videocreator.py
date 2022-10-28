@@ -90,4 +90,6 @@ create_reel()
 
 
 
+# GET HASHTAGS AND POST TO INSTA
+
 # bot.upload_video(file,caption)
