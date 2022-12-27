@@ -50,8 +50,7 @@ def post_to_insta():
 # travelphotography
 topics = ["travelphotography"]
 numtags = 30
-imgpath = "/Users/aryanmehra/Downloads/IMG_1679 (2).jpg"
-
+imgpath = ""
 with Image.open(imgpath) as f:
     create_post(
         topics=topics,
